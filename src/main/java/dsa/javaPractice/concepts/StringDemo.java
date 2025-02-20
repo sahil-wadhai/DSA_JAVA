@@ -45,17 +45,17 @@ import java.util.Arrays;
 
 public class StringDemo {
 
-    public static void main(String [] args){
+    public static void main(String[] args) {
         String name = "Sahil-Wadhai";
-        System.out.println(" name : "+name);
+        System.out.println(" name : " + name);
         System.out.println();
-        System.out.println(" name.length() : " + name.length() );
+        System.out.println(" name.length() : " + name.length());
         System.out.println();
-        System.out.println( " name.charAt(1) : " + name.charAt(1));
+        System.out.println(" name.charAt(1) : " + name.charAt(1));
         System.out.println();
-        System.out.println( " name.contains(\"Wadhai\") : " + name.contains("Wadhai"));
+        System.out.println(" name.contains(\"Wadhai\") : " + name.contains("Wadhai"));
         System.out.println();
-        System.out.println(" name.split(\"-\") returns array : " + Arrays.toString(name.split("-") ));
+        System.out.println(" name.split(\"-\") returns array : " + Arrays.toString(name.split("-")));
         System.out.println();
         System.out.println(" name.toCharArray() returns char array : " + Arrays.toString(name.toCharArray()));
         System.out.println();
@@ -63,15 +63,15 @@ public class StringDemo {
         System.out.println();
         System.out.println(" name.toUpperCase() : " + name.toUpperCase());
         System.out.println();
-        System.out.println( " name.toLowerCase() : " + name.toLowerCase());
+        System.out.println(" name.toLowerCase() : " + name.toLowerCase());
         System.out.println();
-        System.out.println( " name.startsWith(\"Sahil\") : " + name.startsWith("Sahil"));
-        System.out.println( " name.endsWith(\"Sahil\") : " + name.endsWith("Sahil"));
+        System.out.println(" name.startsWith(\"Sahil\") : " + name.startsWith("Sahil"));
+        System.out.println(" name.endsWith(\"Sahil\") : " + name.endsWith("Sahil"));
 
         StringBuffer sb = new StringBuffer("xyzAbc");
-        System.out.println(" sb : "+sb);
+        System.out.println(" sb : " + sb);
         String s = sb.toString();
-        System.out.println(" s : "+s);
+        System.out.println(" s : " + s);
 
     }
 
