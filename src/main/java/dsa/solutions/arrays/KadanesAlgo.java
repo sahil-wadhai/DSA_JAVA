@@ -3,27 +3,23 @@ package dsa.solutions.arrays;
 //reference: https://www.javatpoint.com/largest-sum-contiguous-subarray
 
 import java.util.*;
-class KadanesAlgo
-{
+class KadanesAlgo{
     /*
         Brute Force : find all subarrays[3 loops] (count sum of all and then print max among them.)
         optimized : Run two for loops (traverse all subarrays and update max if sum > max ) <=(solved)
         best : Kadane's algorithm <=(solved)
     */
 
-    private static int twoLoops(int [] nums)
-    {
+    private static int twoLoops(int [] nums){
         int N = nums.length;
         int max = nums[0];
 
-        for(int i = 0; i<N ; i++)
-        {
+        for(int i = 0; i<N ; i++){
             int sum = 0;
-            for(int j = i ; j<N ; j++) //traversing all subarrays and updating max if sum > max
-            {
+            for(int j = i ; j<N ; j++){
+                //traversing all subarrays and updating max if sum > max
                 sum += nums[j];
-                if(sum>max)
-                {
+                if(sum>max){
                     max = sum;
                 }
             }
@@ -31,8 +27,7 @@ class KadanesAlgo
         return max;
     }
 
-    static int kadanesAlgo(int[] nums)
-    {
+    static int kadanesAlgo(int[] nums){
         int N = nums.length;
         int sum = 0;
         int max = nums[0];
@@ -50,7 +45,7 @@ class KadanesAlgo
 
     //Kadane's follow up
     //Get start and end index of subarray with max sum
-    static private int[] maxSubArray(int[] nums) {
+    static private int[] maxSubArray(int[] nums){
         int n = nums.length;
         int sum = 0;
         int max = nums[0];
@@ -70,7 +65,7 @@ class KadanesAlgo
 
             if(sum>max){
                 ans[0] = start;
-                ans[1] =i;
+                ans[1] = i;
                 max = sum;
             }
 

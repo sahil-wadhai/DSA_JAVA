@@ -14,50 +14,38 @@ public class BuySellStock {
         int n = prices.length;
         int maxProfit = Integer.MIN_VALUE;
 
-        for(int i=0 ; i<n-1 ; i++)
-        {
-            for(int j=i+1 ; j<n ; j++)
-            {
+        for(int i=0 ; i<n-1 ; i++){
+            for(int j=i+1 ; j<n ; j++){
                 int profit = prices[j] - prices[i];
-                if(profit > maxProfit)
-                {
+                if(profit > maxProfit){
                     maxProfit = profit;
                 }
             }
         }
-        if(maxProfit<0)
-        {
+        if(maxProfit<0){
             return 0;
         }
-        else
-        {
+        else {
             return maxProfit;
         }
     }
 
-    private static int maxProfit(int[] prices)
-    {
+    private static int maxProfit(int[] prices){
         int n = prices.length;
-
         int buyDay = 0;
         int sellDay = 1;
         int maxProfit = 0;
 
-        while(sellDay < n)
-        {
-
-            if(prices[buyDay] > prices[sellDay])
-            {
+        while(sellDay < n){
+            if(prices[buyDay] > prices[sellDay]){
                 buyDay = sellDay;
             }
-            else
-            {
+            else{
                 int profit = prices[sellDay] - prices[buyDay];
                 maxProfit = Math.max(profit,maxProfit);
             }
             sellDay++;
         }
-
         return maxProfit;
     }
 
