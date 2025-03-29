@@ -36,7 +36,7 @@ public class ExceptionDemo {
         try{
             throw new NavinException("custom exception message");
         }catch(NavinException e){
-            System.out.println(e);
+            System.out.println(e.getMessage());
         }
 
         // ***** throws demo ******

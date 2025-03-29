@@ -101,6 +101,7 @@ public class CollectionDemo {
         queue.add("Item1"); // O(1)
         queue.add("Item2");
         queue.add("Item3");
+
         System.out.println("\nQueue: " + queue);
 
         System.out.println(queue.poll()); // O(1)
