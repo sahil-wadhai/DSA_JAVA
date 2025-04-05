@@ -1,6 +1,12 @@
 package dsa.solutions.binarySearch;
 // https://leetcode.com/problems/koko-eating-bananas/description/
 
+/*
+Steps to solve these type of problems:
+ 1) Find the range in which ans lies
+ 2) Perform the search in these range, first try linear then switch to binary search
+*/
+
 public class KokoEatingBananas{
 
     private int findMax(int [] piles){
